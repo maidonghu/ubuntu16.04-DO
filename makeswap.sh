@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 swapon --show
 free -h
 df -h
-read -p "Please input how many G will be used as swap file" swhg
+read -p "Please input how many G will be used as swap file: " swhg
 fallocate -l $swhgG /swapfile
 ls -lh /swapfile
 chmod 600 /swapfile
