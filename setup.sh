@@ -6,7 +6,7 @@ apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
 apt install ntp
 date
-sed -i 's/ports 22/ports 50009/' /etc/ssd/sshd_config
+sed -i 's/Port 22/Port 50009/' /etc/ssd/sshd_config
 systemctl restart sshd
 ufw allow 50009/tcp
 ufw allow 6800/tcp
