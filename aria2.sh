@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e "\r" | sudo add-apt-repository ppa:jonathonf/ffmpeg-3
 sudo apt update && sudo apt install ffmpeg aria2 -y
-wget https://raw.githubusercontent.com/maidonghu/myaria2/master/aria2_1.31.0-1_amd64.deb
+wget https://raw.githubusercontent.com/maidonghu/myconf/master/aria2_1.31.0-1_amd64.deb
 sudo dpkg -i aria2_1.31.0-1_amd64.deb
 cd /mnt/volume-nyc1-01
 sudo mkdir -p Downloads
@@ -9,7 +9,7 @@ cd Downloads
 sudo touch aria2.log
 sudo touch aria2.session
 cd ~
-wget https://raw.githubusercontent.com/maidonghu/myaria2/master/aria2.conf
+wget https://raw.githubusercontent.com/maidonghu/ubuntu16-DO/master/aria2.conf
 sudo mv aria2.conf /usr/local/etc/aria2.conf
 sudo aria2c --conf-path=/usr/local/etc/aria2.conf
 
@@ -34,6 +34,6 @@ sudo source ./.profile
 echo export PATH=$PATH:$GOPATH/bin | sudo tee -a ./.profile
 sudo source ./.profile
 sudo go get github.com/prasmussen/gdrive
-wget https://raw.githubusercontent.com/maidonghu/myaria2/master/token_v2.json
+wget https://raw.githubusercontent.com/maidonghu/myconf/master/token_v2.json
 sudo mkdir .gdrive
 sudo mv token_v2.json ./.gdrive/token_v2.json
