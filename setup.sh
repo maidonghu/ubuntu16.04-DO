@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 read -s -p "Enter Root Password: "  pswd
 echo -e "$pswd\n$pswd" | passwd
 # passwd
