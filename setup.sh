@@ -10,7 +10,7 @@ sed -i 's/Port 22/Port 50009/' /etc/ssh/sshd_config
 systemctl restart sshd
 ufw allow 50009/tcp
 ufw allow 6800/tcp
-ufw enable -y
+echo -e "y\r" | ufw enable
 ufw logging on
 ufw logging medium
 mkfs.ext4 -F /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01
