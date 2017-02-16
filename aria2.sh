@@ -9,7 +9,7 @@ cd Downloads
 sudo touch aria2.log
 sudo touch aria2.session
 cd ~
-wget https://raw.githubusercontent.com/maidonghu/ubuntu16-DO/master/aria2.conf
+wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/aria2.conf
 sudo mv aria2.conf /usr/local/etc/aria2.conf
 sudo aria2c --conf-path=/usr/local/etc/aria2.conf
 
