@@ -1,3 +1,4 @@
+#!/bin/sh
 swapon --show
 free -h
 df -h
