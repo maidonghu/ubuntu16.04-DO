@@ -1,7 +1,8 @@
-sudo swapon --show
+swapon --show
 free -h
 df -h
-fallocate -l 1G /swapfile
+read -p "Please input how many G will be used as swap file" swhg
+fallocate -l $swhgG /swapfile
 ls -lh /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
