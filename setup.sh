@@ -5,6 +5,7 @@ echo -e '$pswd\n$pswd' | passwd
 apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
 apt install ntp
+date
 sed -i 's/ports 22/ports 50009/' /etc/ssd/sshd_config
 systemctl restart sshd
 ufw allow 50009/tcp
