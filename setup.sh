@@ -21,3 +21,4 @@ wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/makeswap.
 chmod +x makeswap.sh
 ./makeswap.sh
 echo 'Please logoff and login again with SSH!' 
+reboot
