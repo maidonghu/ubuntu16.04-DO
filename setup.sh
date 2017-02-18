@@ -20,5 +20,8 @@ echo /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01 /mnt/volume-nyc1-01 ext4 def
 wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/makeswap.sh
 chmod +x makeswap.sh
 ./makeswap.sh
+
+echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
+echo PATH=$PATH:$GOPATH/bin | sudo tee -a ./.profile
 echo 'Please logoff and login again with SSH!' 
 reboot
