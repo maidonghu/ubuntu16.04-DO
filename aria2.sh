@@ -30,10 +30,10 @@ sudo apt install megatools -y
 
 sudo apt install golang-go -y
 echo export GOPATH=/root/gocode | sudo tee -a ./.profile
-sudo source ./.profile
+source ./.profile
 echo export PATH=$PATH:$GOPATH/bin | sudo tee -a ./.profile
-sudo source ./.profile
-sudo go get github.com/prasmussen/gdrive
+source ./.profile
+go get github.com/prasmussen/gdrive
 wget https://raw.githubusercontent.com/maidonghu/myconf/master/token_v2.json
 sudo mkdir .gdrive
 sudo mv token_v2.json ./.gdrive/token_v2.json
