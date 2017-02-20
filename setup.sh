@@ -2,6 +2,10 @@
 read -s -p "Enter Root Password: "  pswd
 echo -e "$pswd\n$pswd" | passwd
 # passwd
+adduser --disabled-password --gecos "" mike
+read -s -p "Enter mike's new Password: "  pswd
+echo -e "$pswd\n$pswd" | passwd mike
+adduser mike sudo
 apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
 apt install ntp -y
