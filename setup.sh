@@ -22,6 +22,6 @@ chmod +x makeswap.sh
 ./makeswap.sh
 
 echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
-echo PATH=$PATH:$GOPATH/bin | sudo tee -a ./.profile
+echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a ./.profile
 echo 'Please logoff and login again with SSH!' 
 reboot
