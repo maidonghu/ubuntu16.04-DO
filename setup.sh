@@ -39,4 +39,5 @@ chmod +x makeswap.sh
 ./makeswap.sh
 
 echo 'Please logoff and login again with SSH with mike!' 
+sleep 5
 reboot
