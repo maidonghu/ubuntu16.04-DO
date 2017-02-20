@@ -5,6 +5,7 @@ echo -e "$pswd\n$pswd" | passwd
 adduser --disabled-password --gecos "" mike
 read -s -p "Enter mike's new Password: "  pswd
 echo -e "$pswd\n$pswd" | passwd mike
+unset pswd
 adduser mike sudo
 apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
