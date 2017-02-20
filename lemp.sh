@@ -2,7 +2,9 @@ sudo apt-get update
 sudo apt-get install nginx -y
 sudo ufw allow 'Nginx HTTP'
 
+read -s -p "Enter MySQL Root Password: "  pswd
+echo "mysql-server mysql-server/$pswd password root" | sudo debconf-set-selections
+echo "mysql-server mysql-server/$pswd password root" | sudo debconf-set-selections
+apt-get -y install mysql-server
 
-echo "mysql-server mysql-server/root_password password root" | sudo debconf-set-selections
-echo "mysql-server mysql-server/root_password_again password root" | sudo debconf-set-selections
-apt-get -y install mysql-server-5.6
+sudo mysql_secure_installation
