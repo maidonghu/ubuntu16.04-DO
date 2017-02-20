@@ -7,6 +7,16 @@ read -s -p "Enter mike's new Password: "  pswd
 echo -e "$pswd\n$pswd" | passwd mike
 unset pswd
 adduser mike sudo
+su - mike
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+touch ./.ssh/authorized_keys
+exit
+cat ./.ssh/authorized_keys | tee -a /home/mike/.ssh/authorized_keys
+su - mike
+chmod 600 ~/.ssh/authorized_keys
+exit
+
 apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
 apt install ntp -y
