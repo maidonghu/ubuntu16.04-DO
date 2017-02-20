@@ -15,6 +15,8 @@ exit
 cat ./.ssh/authorized_keys | tee -a /home/mike/.ssh/authorized_keys
 su - mike
 chmod 600 ~/.ssh/authorized_keys
+echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
+echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a ./.profile
 exit
 
 apt update && apt upgrade -y
@@ -36,7 +38,5 @@ wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/makeswap.
 chmod +x makeswap.sh
 ./makeswap.sh
 
-echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
-echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a ./.profile
-echo 'Please logoff and login again with SSH!' 
+echo 'Please logoff and login again with SSH with mike!' 
 reboot
