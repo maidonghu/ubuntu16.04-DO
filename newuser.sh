@@ -1,3 +1,4 @@
+#!/bin/bash
 su - mike
 mkdir ~/.ssh
 chmod 700 ~/.ssh
