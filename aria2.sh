@@ -31,7 +31,7 @@ sudo apt install megatools -y
 
 sudo apt install golang-go -y
 
-export GOPATH=$HOME/gocode | sudo tee -a /home/mike/.profile
+echo export GOPATH=$HOME/gocode | sudo tee -a /home/mike/.profile
 echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a /home/mike/.profile
 source ./.profile
 go get github.com/prasmussen/gdrive
