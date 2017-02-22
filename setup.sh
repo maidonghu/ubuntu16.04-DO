@@ -31,8 +31,6 @@ wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/makeswap.
 chmod +x makeswap.sh
 ./makeswap.sh
 
-echo export GOPATH=$HOME/gocode | sudo tee -a /home/mike/.profile
-echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a /home/mike/.profile
 echo 'Please logoff and login again with SSH with mike!' 
 sleep 5
 sudo reboot
