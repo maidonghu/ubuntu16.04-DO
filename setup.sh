@@ -8,6 +8,11 @@ echo -e "$pswd\n$pswd" | passwd mike
 unset pswd
 adduser mike sudo
 
+mkdir /home/mike/.ssh
+chmod 700 /home/mike/.ssh
+cat ./.ssh/authorized_keys >> /home/mike/.ssh/authorized_keys
+chown mike:mike /home/mike -R
+
 apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
 apt install ntp -y
@@ -26,14 +31,8 @@ wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/makeswap.
 chmod +x makeswap.sh
 ./makeswap.sh
 
-su - mike
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-touch ./.ssh/authorized_keys
-sudo cat ./.ssh/authorized_keys | tee -a /home/mike/.ssh/authorized_keys
-chmod 600 ~/.ssh/authorized_keys
-echo export GOPATH=$HOME/gocode | sudo tee -a ./.profile
-echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a ./.profile
+echo export GOPATH=$HOME/gocode | sudo tee -a /home/mike/.profile
+echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a /home/mike/.profile
 echo 'Please logoff and login again with SSH with mike!' 
 sleep 5
 sudo reboot
