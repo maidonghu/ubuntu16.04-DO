@@ -31,6 +31,7 @@ sudo apt install megatools -y
 sudo apt install golang-go -y
 
 go get github.com/prasmussen/gdrive
-wget https://raw.githubusercontent.com/maidonghu/myconf/master/token_v2.json
-sudo mkdir .gdrive
+echo "Please provied gdrive cert file"
+sleep 30
+mkdir .gdrive
 sudo mv token_v2.json ./.gdrive/token_v2.json
