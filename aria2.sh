@@ -30,8 +30,11 @@ sudo apt install megatools -y
 
 sudo apt install golang-go -y
 
+export GOPATH=$HOME/gocode | sudo tee -a /home/mike/.profile
+echo PATH=$PATH:$HOME/gocode/bin | sudo tee -a /home/mike/.profile
+source ./.profile
 go get github.com/prasmussen/gdrive
 echo "Please provied gdrive cert file"
 sleep 30
 mkdir .gdrive
-sudo mv token_v2.json ./.gdrive/token_v2.json
+mv token_v2.json ./.gdrive/token_v2.json
