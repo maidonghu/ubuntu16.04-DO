@@ -29,10 +29,9 @@ sudo ufw allow 6800/tcp
 
 sudo apt install megatools -y
 
-sudo apt install golang-go -y
+sudo wget https://raw.githubusercontent.com/maidonghu/myconf/master/gdrive -O /usr/local/bin/gdrive
+sudo chmod a+rx /usr/local/bin/gdrive
 
-
-go get github.com/prasmussen/gdrive
 echo "Please provied gdrive cert file"
 sleep 30
 mkdir .gdrive
