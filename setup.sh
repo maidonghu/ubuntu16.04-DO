@@ -13,9 +13,6 @@ chmod 700 /home/mike/.ssh
 cat ./.ssh/authorized_keys >> /home/mike/.ssh/authorized_keys
 chown mike:mike /home/mike -R
 
-echo export GOPATH=/home/mike/gocode | tee -a /home/mike/.profile
-echo "PATH=$PATH:/home/mike/gocode/bin" >> /home/mike/.profile
-
 apt update && apt upgrade -y
 timedatectl set-timezone America/Vancouver
 apt install ntp -y
