@@ -31,9 +31,7 @@ sudo apt install megatools -y
 
 sudo apt install golang-go -y
 
-echo export GOPATH=$HOME/gocode | tee -a ./.profile
-echo "PATH=$PATH:$HOME/gocode/bin" >> ./.profile
-source ./.profile
+
 go get github.com/prasmussen/gdrive
 echo "Please provied gdrive cert file"
 sleep 30
