@@ -17,3 +17,20 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 sudo systemctl restart apache2
   
 sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-xml php-zip
+
+
+sudo apt-get install python-letsencrypt-apache -y
+sudo letsencrypt --apache -d owncloud.mikecloud.info
+
+sudo curl https://download.owncloud.org/download/repositories/stable/Ubuntu_16.04/Release.key | sudo apt-key add -
+echo 'deb https://download.owncloud.org/download/repositories/stable/Ubuntu_16.04/ /' | sudo tee /etc/apt/sources.list.d/owncloud.list
+sudo apt-get update
+sudo apt-get install owncloud  -y
+sudo systemctl reload apache2
+
+mysql -u root -p
+CREATE DATABASE owncloud;
+GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'set_database_password';
+FLUSH PRIVILEGES;
+exit
+
