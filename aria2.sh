@@ -1,4 +1,9 @@
 #!/bin/bash
+sudo mkfs.ext4 -F /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01
+sudo mkdir -p /mnt/volume-nyc1-01
+sudo mount -o discard,defaults /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01 /mnt/volume-nyc1-01
+echo /dev/disk/by-id/scsi-0DO_Volume_volume-nyc1-01 /mnt/volume-nyc1-01 ext4 defaults,nofail,discard 0 0 | sudo tee -a /etc/fstab
+
 echo -e "\r" | sudo add-apt-repository ppa:jonathonf/ffmpeg-3
 sudo apt update && sudo apt install ffmpeg aria2 -y
 wget https://raw.githubusercontent.com/maidonghu/myconf/master/aria2_1.31.0-1_amd64.deb
