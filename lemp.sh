@@ -7,3 +7,5 @@ sudo ufw allow 'Nginx HTTP'
 #echo "mysql-server mysql-server/$pswd password root" | sudo debconf-set-selections
 sudo -E apt-get install -y -q mysql-server
 sudo mysql -sfu root < "mysql_secure_installation.sql"
+
+sudo apt-get install php-fpm php-mysql
