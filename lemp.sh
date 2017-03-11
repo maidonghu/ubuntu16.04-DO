@@ -20,4 +20,6 @@ sudo sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.0/fpm/php.ini
 sudo systemctl restart php7.0-fpm
 
 sudo wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/sites-available/defaut
+sudo wget -O /etc/nginx/snippets/ssl-digital.mikecloud.info.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/snippets/ssl-digital.mikecloud.info.conf
+sudo wget -O /etc/nginx/snippets/ssl-params.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/snippets/ssl-params.conf
 sudo systemctl restart nginx
