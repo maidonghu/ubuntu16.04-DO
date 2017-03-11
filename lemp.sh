@@ -23,5 +23,5 @@ sudo wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.co
 sudo wget -O /etc/nginx/snippets/ssl-digital.mikecloud.info.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/snippets/ssl-digital.mikecloud.info.conf
 sudo wget -O /etc/nginx/snippets/ssl-params.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/snippets/ssl-params.conf
 echo "Please provide ssl certs, keys and dhparam file"
-sleep 60
+sleep 90
 sudo systemctl restart nginx
