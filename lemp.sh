@@ -43,3 +43,7 @@ sudo chmod -R g+w /var/www/html/wp-content/themes
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 
 sudo wget -O /var/www/html/wp-config.php https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/var/www/html/wp-config.php
+
+sudo systemctl restart mysql
+sudo systemctl restart php7.0-fpm
+sudo systemctl restart nginx
