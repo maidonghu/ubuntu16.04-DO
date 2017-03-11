@@ -22,6 +22,4 @@ sudo systemctl restart php7.0-fpm
 sudo wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/sites-available/defaut
 sudo wget -O /etc/nginx/snippets/ssl-digital.mikecloud.info.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/snippets/ssl-digital.mikecloud.info.conf
 sudo wget -O /etc/nginx/snippets/ssl-params.conf https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/etc/nginx/snippets/ssl-params.conf
-echo "Please provide ssl certs, keys and dhparam file"
-sleep 90
-sudo systemctl restart nginx
+echo "Please provide ssl certs, keys and dhparam file and then restart nginx"
