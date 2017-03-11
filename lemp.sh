@@ -42,4 +42,4 @@ sudo chmod g+w /var/www/html/wp-content
 sudo chmod -R g+w /var/www/html/wp-content/themes
 sudo chmod -R g+w /var/www/html/wp-content/plugins
 
-get /var/www/html/wp-config.php
+sudo wget -O /var/www/html/wp-config.php https://raw.githubusercontent.com/maidonghu/ubuntu16.04-DO/master/var/www/html/wp-config.php
