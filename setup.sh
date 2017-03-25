@@ -10,8 +10,7 @@ adduser mike sudo
 
 mkdir /home/mike/.ssh
 chmod 700 /home/mike/.ssh
-wget https://raw.githubusercontent.com/maidonghu/ubuntu16.04-LN/master/authorized_keys
-cat ./authorized_keys >> /home/mike/.ssh/authorized_keys
+cat ./.ssh/authorized_keys >> /home/mike/.ssh/authorized_keys
 chown mike:mike /home/mike -R
 
 echo 'Acquire::ForceIPv4 "true";' | tee /etc/apt/apt.conf.d/99force-ipv4
