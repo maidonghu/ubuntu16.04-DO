@@ -34,6 +34,9 @@ sudo ufw allow 6800/tcp
 
 sudo apt install megatools -y
 
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
 sudo wget https://raw.githubusercontent.com/maidonghu/myconf/master/gdrive -O /usr/local/bin/gdrive
 sudo chmod a+rx /usr/local/bin/gdrive
 
